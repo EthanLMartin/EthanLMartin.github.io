@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<title>
+    C# Web Development - 1
+</title>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="styling.css" />
+</head>
+
+<body>
+    <div class="main-flexbox">
+        <article class="main-content">
+            <div>
+                <h1>Some of my favourite deserts</h1>
+                <ol>
+                    <li>Morrison's Strawberry Tart</li>
+                    <li>Carrot Cake</li>
+                    <li>Coffee Cake</li>
+                </ol>
+            </div>
+
+            <div>
+                <h1>Information about something I'm interested in</h1>
+                <p>
+                    <a href="https://www.warframe.com" target="_blank">Warframe</a>
+                    is a free-to-play action role playing third-person shooter multiplayer online game developed and published by Digital Extremes. 
+                    Originally released for Windows personal computers in March 2013 following a beta period, it was ported to the PlayStation 4 in November 2013, 
+                    the Xbox One in September 2014, and the Nintendo Switch in November 2018. 
+                </p>
+                <p class="source">Source: <a href="https://en.wikipedia.org/wiki/Warframe" target="_blank">Wikipedia</a></p>
+            </div>
+
+            <div>
+                <h1>Links to some websites that are clearly well designed</h1>
+                <ul>
+                    <li><a href="https://www.spacejam.com/" target="_blank">The original Space Jam website</a></li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="image-arrow-box">
+            <img src="assets/picture.png" alt="Image of some cartoon guy with a DIO face" onclick="magic()"/>
+            <div class="arrow_box">
+                <p>
+                    This is a picture!
+                </p>
+            </div>
+        </article>
+    </div>
+    <script>
+        function magic() {
+            var all = document.getElementsByTagName('*');
+            var enabled = (all[0].className.search("wow") != -1)
+            for (var i = 0; i < all.length; i++) {
+                if (enabled) {
+                    all[i].className = all[i].className.substring(0, all[i].className.length - 4)
+                } else {
+                    all[i].className = all[i].className + " wow"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
