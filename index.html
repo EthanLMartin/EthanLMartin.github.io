@@ -53,12 +53,13 @@
     <script>
         function magic() {
             var all = document.getElementsByTagName('*');
-            var enabled = (all[0].className.search("wow") != -1)
-            for (var i = 0; i < all.length; i++) {
-                if (enabled) {
-                    all[i].className = all[i].className.substring(0, all[i].className.length - 4)
+            var enabled = (all[7].className.search("wow") != -1)
+            for (var i = 7; i < all.length; i++) {
+                if (!enabled) {
+                    all[i].className += " wow"
+                    all[i].style.setProperty('animation-delay', `${Math.random() * 20}s`)
                 } else {
-                    all[i].className = all[i].className + " wow"
+                    all[i].className = all[i].className.substring(0, all[i].className.length - 4)
                 }
             }
         }
